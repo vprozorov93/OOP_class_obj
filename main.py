@@ -128,6 +128,17 @@ class Reviewer(Mentor):
 
 
 def avg_for_students(students, course):
+    """
+    Function(fx) return float average for list value class Student and the course.
+
+    'students' is list, list with value class Student.
+    'course' is string, course name.
+
+    FX check that parameters 'students' and 'course' is valid. Next for every element in 'student' list FX search
+    key 'course' in dict (student.grades) and gets sum(value_for_key) and len(value_for_key) to sum_ and i variable.
+    Next FX return sum_ / i
+    If parameters 'students' and 'course' is not valid FX print 'Не верный тип аргумента students или course'
+    """
     if (isinstance(course, str) and
             reduce(lambda x, y: x * y, [isinstance(student, Student) for student in students]) != 0):
         sum_ = 0
@@ -141,6 +152,17 @@ def avg_for_students(students, course):
 
 
 def avg_for_lectors(lectors, course):
+    """
+      Function(fx) return float average for list value class Lecturer and the course.
+
+      'lectors' is list, list with value class Lecturer.
+      'course' is string, course name.
+
+      FX check that parameters 'lectors' and 'course' is valid. Next for every element in 'lector' list FX search
+      key 'course' in dict (lector.grades_for_lec) and gets sum(value_for_key) and len(value_for_key) to sum_ and i variable.
+      Next FX return sum_ / i
+      If parameters 'lectors' and 'course' is not valid FX print 'Не верный тип аргумента students или course'
+      """
     if (isinstance(course, str) and
             reduce(lambda x, y: x * y, [isinstance(lector, Lecturer) for lector in lectors]) != 0):
         sum_ = 0
@@ -215,7 +237,7 @@ print("Средний балл по Git у студентов:")
 print(avg_for_students([best_student, best_student2], 'Git'))
 print("Средняя оценка по Py у преподов:")
 print(avg_for_lectors([cool_lec, cool_lec2], 'Python'))
-
+help(avg_for_students)
 
 # # print(dir(str))
 #
