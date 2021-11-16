@@ -152,6 +152,7 @@ def avg_for_lectors(lectors, course):
         return round(sum_ / i, 2)
     print('Не верный тип аргумента lectors или course')
 
+
 best_student = Student('Ruoy', 'Eman', 'your_gender')
 best_student2 = Student('A', 'B', 'your_gender')
 best_student.courses_in_progress += ['Python']
@@ -194,21 +195,25 @@ best_student2.rate_lec(cool_lec2, 'Git', 2)
 best_student2.rate_lec(cool_lec2, 'Git', 2)
 best_student2.rate_lec(cool_lec2, 'Git', 2)
 
-
+print("Студенты:")
 print(best_student)
 print(best_student2)
 print(best_student < best_student2)
 print(best_student > best_student2)
 
+print("Ревьюверы:")
 print(cool_mentor)
 print(cool_mentor2)
 
+print("Лекторы:")
 print(cool_lec)
 print(cool_lec2)
 print(cool_lec > cool_lec2)
 print(cool_lec < cool_lec2)
 
+print("Средний балл по Git у студентов:")
 print(avg_for_students([best_student, best_student2], 'Git'))
+print("Средняя оценка по Py у преподов:")
 print(avg_for_lectors([cool_lec, cool_lec2], 'Python'))
 
 
